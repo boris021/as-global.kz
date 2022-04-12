@@ -1,0 +1,302 @@
+//====================================================================================================
+.header {
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+	background: #F9FCFF;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+.header__container {}
+
+.header__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	flex: 0 1 auto;
+	width: 178px;
+	height: 69px;
+	z-index: 20;
+
+	& img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.header__menu {}
+
+.menu {}
+
+.menu__body {
+	display: flex;
+
+	@media (max-width:$tablet) {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: -100%;
+		overflow: auto;
+		background-color: #fff;
+		padding: 120px 20px;
+		z-index: 4;
+		transition: all 0.3s ease 0s;
+
+		.menu-open & {
+			left: 0;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			position: fixed;
+			background-color: #F9FCFF;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 50;
+		}
+	}
+
+}
+
+.menu__list>li {
+	position: relative;
+	margin: 0px 30px 0px 0px;
+
+	@media (max-width:$mobile) {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0px 0px 25px 0px;
+	}
+}
+
+.menu__sub-list {
+	position: relative;
+	background: #F9FCFF;
+	flex: 1 1 100%;
+	display: none;
+}
+
+.menu__sub-list:hover {
+	display: block;
+}
+
+
+@media (min-width:$tablet) {
+	.menu__list {
+		display: flex;
+		align-items: center;
+	}
+
+	.menu__list>li {
+		padding: 10px 0;
+	}
+
+	.menu__sub-list {
+		transform: translate(0px, 00%);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: all 0.3s ease 0s;
+	}
+}
+
+.menu__sub-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #F9FCFF;
+	padding: 20px;
+	min-width: rem(250);
+}
+
+.menu__sub-list>li {
+	margin-bottom: 15px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.menu__sub-link {
+	font-size: 15px;
+	transition: color 0.3s ease 0s;
+
+	&:hover {
+		color: $blueColor;
+	}
+}
+
+.menu__list>li:hover .menu__sub-list {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0px, 0px);
+	pointer-events: all;
+}
+
+
+
+.menu__item {
+
+	@media (max-width:$mobile) {
+		width: 100%;
+	}
+
+	@media (max-width:$mobile) {
+		margin-right: 0;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.menu__item a {
+	position: relative;
+}
+
+.menu__item a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 0;
+	height: 2px;
+	background-color: $blueColor;
+	transition: width 0.3s ease-out 0s;
+}
+
+.menu__item a:hover::after {
+	width: 100%;
+}
+
+
+.menu__link {
+	font-size: 16px;
+	transition: color 0.3s ease 0s;
+
+	&:hover {
+		color: $blueColor;
+	}
+
+	@media (max-width:$mobile) {
+		font-size: 20px;
+	}
+}
+
+.header__actions {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+
+	@media (max-width:$mobile) {
+		display: none;
+	}
+
+}
+
+.header__actions-link {
+	margin-bottom: 10px;
+	font-size: 18px;
+	letter-spacing: 2;
+	font-weight: 600;
+	transition: all 0.3s ease 0s;
+
+	& i {
+		margin-right: 5px;
+		font-size: 15px;
+	}
+
+	&:hover {
+		color: $blueColor
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.header__actions-link-whatsapp {
+	font-size: 16px;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+
+	& i {
+		margin-right: 5px;
+	}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: $blueColor;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

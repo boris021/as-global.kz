@@ -45,10 +45,10 @@ export let isMobile = {
 /* Добавление класса touch для HTML если браузер мобильный */
 export function addTouchClass() {
 	// Добавление класса _touch для HTML если браузер мобильный
-	if (isMobile.any()) document.documentElement.classList.add('touch');
+	if (isMobile.any()) document.documentElement.classList.add('_touch');
 }
 if (isMobile.any()) {
-	document.body.classList.add('touch');
+	document.body.classList.add('_touch');
 
 	let menuArrows = document.querySelectorAll('.menu__arrow');
 	if (menuArrows.length > 0) {
@@ -63,10 +63,6 @@ if (isMobile.any()) {
 } else {
 	document.body.classList.add('_pc');
 }
-
-
-
-
 
 // Добавление loaded для HTML после полной загрузки страницы
 export function addLoadedClass() {

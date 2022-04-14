@@ -140,6 +140,7 @@
 }
 
 .menu__sub-list {
+	position: relative;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -261,6 +262,7 @@ body._touch .menu__list>li._active .menu__arrow {
 		margin-bottom: 0;
 	}
 
+	// показыват под меню при наведение на треугольник
 	.menu__list>li._active .menu__sub-list {
 		display: block;
 	}
@@ -280,6 +282,16 @@ body._touch .menu__list>li._active .menu__arrow {
 	.menu__sub-link {
 		font-size: 16px;
 	}
+}
+
+// меню 3 уровня
+.menu__sub-sub-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: red;
+	padding: 15px;
+	min-width: rem(250);
 }
 
 //====================================================================================================

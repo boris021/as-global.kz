@@ -500,6 +500,7 @@ body._touch .menu__list > li._active .menu__sub-list {
       -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   pointer-events: all;
+  background: #F9FCFF;
 }
 
 body._touch .menu__list > li._active .menu__arrow {
@@ -551,6 +552,7 @@ body._touch .menu__sub-list > li._active .menu__sub-sub-list {
       -ms-transform: translate(-100%, 0px);
           transform: translate(-100%, 0px);
   pointer-events: all;
+  background: #F9FCFF;
 }
 
 .menu__sub-sub-list {

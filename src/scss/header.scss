@@ -144,43 +144,44 @@
 	top: 100%;
 	left: 0;
 	background-color: #F9FCFF;
-	padding: 15px 0 15px 15px;
+	// padding: 15px 0 15px 15px;
 	min-width: rem(250);
 }
 
 .menu__sub-list li {
-	margin: 0px 0px 20px 0px;
+	margin: 0px 0px 1px 0px;
 
 	&:last-child {
 		margin: 0px 0px 0px 0px;
+	}
+
+	&:hover {
+		color: #fff;
 	}
 }
 
 .menu__sub-link {
 	position: relative;
-	color: $mainColor;
-	transition: color 0.3s ease 0s;
+	transition: color 0.1s ease 0s;
+}
+
+.menu__sub-list>li {
+	padding: 10px;
+
+	@media (max-width:$tablet) {
+		padding: 10px 0 10px 10px;
+	}
 
 	&:hover {
-		color: $blueColor;
+		background-color: $blueColor;
+
+		@media (max-width:$tablet) {
+			background-color: #fff;
+			color: #000;
+		}
 	}
 }
 
-.menu__sub-link::after {
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: -5px;
-	width: 0;
-	height: 2px;
-	background-color: $blueColor;
-	transition: width 0.3s ease-out 0s;
-}
-
-.menu__sub-link:hover::after {
-	width: 100%;
-}
 
 .menu__arrow {
 	display: none;
@@ -229,6 +230,12 @@ body._touch .menu__list>li._active .menu__sub-list {
 body._touch .menu__list>li._active .menu__arrow {
 	transform: rotate(-180deg);
 }
+
+// анимирование треугольника
+body._touch .menu__sub-list>li._active .sub-menu__arrow {
+	transform: rotate(0deg);
+}
+
 
 /*--------------------------------------*/
 
@@ -293,7 +300,7 @@ body._touch .menu__list>li._active .menu__arrow {
 body._pc .menu__sub-list>li:hover .menu__sub-sub-list {
 	opacity: 1;
 	visibility: visible;
-	transform: translate(0, -20%);
+	transform: translate(0, 0);
 	pointer-events: all;
 }
 
@@ -307,17 +314,16 @@ body._touch .menu__sub-link {
 	flex: 1 1 auto;
 }
 
-// анимирование треугольника  меню 3 уровня
-._touch .menu__sub-list>li._active .menu__arrows {
-	transform: rotate(-180deg);
-}
-
 // показывает подменю 3 уровня при наведение на мобиле
 body._touch .menu__sub-list>li._active .menu__sub-sub-list {
 	opacity: 1;
 	visibility: visible;
 	transform: translate(-100%, 0px);
 	pointer-events: all;
+
+	@media (max-width:$tablet) {
+		margin-top: 10px;
+	}
 }
 
 .menu__sub-sub-list {
@@ -325,17 +331,22 @@ body._touch .menu__sub-list>li._active .menu__sub-sub-list {
 	top: 0;
 	left: 100%;
 	background-color: #F9FCFF;
-	padding: 15px 15px 0 15px;
+	// padding: 15px;
 	min-width: rem(200);
+
+	@media (max-width:$tablet) {
+		padding: 0 0 0 15px;
+	}
 }
 
 @media (min-width:767px) {
 	.menu__sub-sub-list {
-		transform: translate(0, -20%);
+		transform: translate(0, 0);
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
 		transition: all 0.3s ease 0s;
+		// border: 1px solid red;
 	}
 }
 
@@ -343,6 +354,10 @@ body._touch .menu__sub-list>li._active .menu__sub-sub-list {
 	.menu__sub-list>li {
 		flex-wrap: wrap;
 		margin: 0px 0px 20px 0px;
+
+		@media (max-width:$tablet) {
+			margin: 0;
+		}
 	}
 
 	.menu__sub-list>li:last-child {
@@ -373,28 +388,17 @@ body._touch .menu__sub-list>li._active .menu__sub-sub-list {
 
 .menu__sub-sub-link {
 	position: relative;
+	transition: color 0.1s ease 0s;
+}
+
+.menu__sub-sub-list>li {
 	color: $mainColor;
-	transition: color 0.3s ease 0s;
+	padding: 10px;
 
 	&:hover {
-		color: $blueColor;
+		background-color: $blueColor;
+		color: #fff;
 	}
-}
-
-.menu__sub-sub-link::after {
-	content: '';
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: -5px;
-	width: 0;
-	height: 2px;
-	background-color: $blueColor;
-	transition: width 0.3s ease-out 0s;
-}
-
-.menu__sub-sub-link:hover::after {
-	width: 100%;
 }
 
 //====================================================================================================

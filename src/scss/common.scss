@@ -3,9 +3,17 @@
 	font-style: normal;
 	font-weight: 500;
 	font-size: 34px;
+	@include adaptiveValue("font-size", 34, 28);
 	line-height: 40px;
 	line-height: math.div(40, 34);
 	text-transform: uppercase;
 	color: #183059;
 	@include adaptiveValue("margin-bottom", 20, 15);
+}
+
+.subtitle {
+	font-weight: 400;
+	line-height: math.div(16, 14);
+	color: #172E54;
+	@include adaptiveValue("margin-bottom", 40, 20);
 }

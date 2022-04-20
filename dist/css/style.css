@@ -1257,8 +1257,6 @@ body._touch .menu__sub-list > li._active .menu__sub-sub-list {
 .item__block-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .item__block-title {
@@ -1645,6 +1643,59 @@ body._touch .menu__sub-list > li._active .menu__sub-sub-list {
   text-align: center;
   color: #FFFFFF;
   margin-top: 20px;
+}
+
+.contacthome {
+  margin-top: 50px;
+  position: relative;
+}
+
+.contacthome::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50px;
+  right: 400px;
+  background: url(../img/circle.svg) right top no-repeat;
+}
+
+.contacthome__container {
+  position: relative;
+}
+
+.contacthome__body {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: -450px;
+  left: 50px;
+  z-index: 2;
+}
+
+.contacthome__block {
+  background: #FFFFFF;
+  border: 10px solid #57B6FE;
+  border-radius: 10px;
+  max-width: 24.375rem;
+  padding: 30px;
+  height: 450px;
+}
+
+.contacthome__block-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2142857143;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.contacthome__block-social {
+  margin-right: 10px;
+}
+
+.contacthome__block-social:last-child {
+  margin-right: 0;
 }
 
 .swiper {
@@ -2927,6 +2978,10 @@ button.swiper-pagination-bullet {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
+
+  .contacthome::before {
+    display: none;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -3061,10 +3116,10 @@ button.swiper-pagination-bullet {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-    margin-right: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin: 0 15px;
   }
 
   .advantage__items {
@@ -3082,6 +3137,15 @@ button.swiper-pagination-bullet {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+
+  .contacthome__body {
+    left: 0;
+  }
+
+  .contacthome__block {
+    padding: 20px;
+    height: 93%;
   }
 }
 

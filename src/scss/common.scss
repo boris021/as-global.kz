@@ -17,3 +17,15 @@
 	color: #172E54;
 	@include adaptiveValue("margin-bottom", 40, 20);
 }
+
+.titletext {
+	@include adaptiveValue("font-size", 30, 24);
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+.category__subtitle {
+	color: #3a3a3a;
+	font-size: 15px;
+	@include adaptiveValue("margin-bottom", 40, 20);
+}

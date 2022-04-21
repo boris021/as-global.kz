@@ -1,23 +1,35 @@
 .tabs {
+
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
 	}
+
 	// .tabs__title
 	&__title {
-		border: 1px solid #eee;
+		// border: 1px solid #eee;
 		padding: rem(10) rem(15);
 		border-radius: rem(5);
+		margin-right: 10px;
+		transition: all 0.3s ease 0s;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
 		&._tab-active {
-			border: 1px solid #000;
+			background: $blueColor;
+			color: #fff;
 		}
 	}
+
 	// .tabs__content
 	&__content {
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
+		margin-top: 10px;
+		border-top: 1px solid #eee;
+		padding: rem(10) 0;
 	}
+
 	// .tabs__body
-	&__body {
-	}
+	&__body {}
 }

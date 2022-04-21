@@ -1,4 +1,3 @@
-
 /*
 Документация по работе в шаблоне: https://www.lightgalleryjs.com/docs/
 Документация плагина: https://www.lightgalleryjs.com/docs/
@@ -6,22 +5,27 @@
 */
 
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, FLS } from "./functions.js";
+import {
+	isMobile,
+	FLS
+} from "./functions.js";
 // Подключение списка активных модулей
-import { flsModules } from "./modules.js";
+import {
+	flsModules
+} from "./modules.js";
 
 // Подключение базового набора функционала
 import lightGallery from 'lightgallery';
 
 // Плагины
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
-// import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
-//import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
+import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
+import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
 
 // Базовые стили
 import '@scss/libs/gallery/lightgallery.scss';
 // Стили дополнений
-// import '@scss/libs/gallery/lg-thumbnail.scss';
+import '@scss/libs/gallery/lg-thumbnail.scss';
 // import '@scss/libs/gallery/lg-video.scss';
 // import '@scss/libs/gallery/lg-autoplay.scss';
 // import '@scss/libs/gallery/lg-zoom.scss';
@@ -34,10 +38,10 @@ import '@scss/libs/gallery/lightgallery.scss';
 // import '@scss/libs/gallery/lg-relative-caption.scss';
 
 // Все стили
-// import '@scss/libs/gallery/lightgallery-bundle.scss';
+import '@scss/libs/gallery/lightgallery-bundle.scss';
 
 // Запуск
-const galleries = document.querySelectorAll('[data-gallery]');
+const galleries = document.querySelectorAll('[data-gallery],[data-galleryy]');
 if (galleries.length) {
 	let galleyItems = [];
 	galleries.forEach(gallery => {
@@ -53,8 +57,3 @@ if (galleries.length) {
 	// Добавляем в объект модулей
 	flsModules.gallery = galleyItems;
 }
-
-
-
-
-

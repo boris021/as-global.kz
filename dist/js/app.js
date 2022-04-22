@@ -9153,8 +9153,8 @@ PERFORMANCE OF THIS SOFTWARE.
             return new LightGallery(el, options);
         }
         const lightgallery_es5 = lightGallery;
-        __webpack_require__(97);
-        __webpack_require__(86);
+        var lg_thumbnail_min = __webpack_require__(97);
+        var lg_zoom_min = __webpack_require__(86);
         const galleries = document.querySelectorAll("[data-gallery],[data-galleryy]");
         if (galleries.length) {
             let galleyItems = [];
@@ -9162,6 +9162,21 @@ PERFORMANCE OF THIS SOFTWARE.
                 galleyItems.push({
                     gallery,
                     galleryClass: lightgallery_es5(gallery, {
+                        licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
+                        speed: 500
+                    })
+                });
+            }));
+            flsModules.gallery = galleyItems;
+        }
+        const galleryhome = document.querySelectorAll("[data-gallery]");
+        if (galleries.length) {
+            let galleyItems = [];
+            galleries.forEach((gallery => {
+                galleyItems.push({
+                    galleryhome,
+                    galleryClass: lightgallery_es5(galleryhome, {
+                        plugins: [ lg_zoom_min, lg_thumbnail_min ],
                         licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
                         speed: 500
                     })

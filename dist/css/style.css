@@ -2348,6 +2348,10 @@ body._touch .menu__sub-list > li._active .menu__sub-sub-list {
   margin-bottom: 2%;
 }
 
+picture {
+  display: contents;
+}
+
 .product-button {
   background-color: #1775BC;
   padding: 12px 30px;

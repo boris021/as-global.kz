@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220422164307">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220422171810">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css?_v=20220422164307" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css?_v=20220422171810" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -362,19 +362,33 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__title">Оставить заявку</div>
+				<div class="popup__body">
+
+					<div class="popup__text">
+						<div class="popup__form">
+							<div class="popup__group">
+								<label for="name" class="popup__label">Введите ваше имя</label>
+								<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите ваше имя" class="input input-popup">
+							</div>
+							<div class="popup__group">
+								<label for="tel" class="popup__label">Введите ваш телефон</label>
+								<input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" placeholder="Введите ваш телефон" class="input input-popup">
+							</div>
+						</div>
+						<button type="submit" class="button-popup">Отправить</button>
+					</div>
+
+				</div>
+
 			</div>
 		</div>
 	</div>
-</div>
- -->
-
-	<script src="js/app.min.js?_v=20220422164307"></script>
+	<script src="js/app.min.js?_v=20220422171810"></script>
 </body>
 
 </html>

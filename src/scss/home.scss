@@ -1184,8 +1184,8 @@
 
 	// .gallery__preview
 	&__preview {
-		width: 33%;
-		margin-bottom: 1px;
+		width: 32%;
+		margin-bottom: 2%;
 	}
 
 	&__previeww {
@@ -1383,9 +1383,7 @@ td.left {
 
 	// .gallery__image
 
-	&__image {
-		width: 80%;
-	}
+	&__image {}
 
 	// .gallery__preview
 
@@ -1397,11 +1395,6 @@ td.left {
 		margin-right: 10px;
 		margin-left: 10px;
 	}
-}
-
-.lg-outer.lg-components-open:not(.lg-zoomed) .lg-sub-html {
-	opacity: 0 !important;
-	transition: opacity 0.2s ease-out 0.15s;
 }
 
 //contact========================================================================================================================================================
@@ -1506,11 +1499,9 @@ td.left {
 	}
 }
 
-.input {}
-
 .contact-form-text {}
 
-.button {
+.contact-form-button {
 	flex: 1 1 auto;
 	background: #1775BC;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

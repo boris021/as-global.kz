@@ -2333,18 +2333,19 @@ body._touch .menu__sub-list > li._active .menu__sub-sub-list {
           justify-content: space-between;
 }
 
-.gallery a {
+.gallery__previeww {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.gallery__image {
+  width: 100%;
   display: contents;
 }
 
 .gallery__preview {
   width: 32%;
   margin-bottom: 2%;
-}
-
-.gallery__previeww {
-  width: 100%;
-  margin-bottom: 20px;
 }
 
 .product-button {
